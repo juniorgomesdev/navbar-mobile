@@ -51,7 +51,3 @@ function closeMenu() {
 
 	icon.innerHTML = 'menu';
 }
-
-function buildMenu() {
-	addLinks('https://fonts.googleapis.com/icon?family=Material+Icons', 'stylesheet');
-} buildMenu()
