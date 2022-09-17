@@ -13,10 +13,12 @@
 
 .menu-icondiv-hm {
   transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
   transition: .30s;
 }
 .menu-icondiv-close-hm {
   transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
 }
 
 .menu-icon-hm {
@@ -36,9 +38,10 @@
   }
   .menu-icondiv-hm {
     width: 3.5rem; height: 3.5rem;
+    transform: scale(0.9);
   }
   .menu-icon-hm {
-    transform: scale(1.5);
+    transform: scale(1.6);
   }
 }
 
