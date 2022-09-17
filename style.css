@@ -5,7 +5,7 @@
 .menu-icondiv-hm {
   position: absolute; width: 2.5rem; height: 2.5rem;
   display: flex; align-items: center; justify-content: center;
-  margin: 1em 1em; padding: 0.5rem 0.5rem 0.4rem 0.5rem;
+  margin: 1em 1em; padding: 0.5rem;
   border: 1px solid ; border-radius: 0.3rem;
   color: #383838;
   cursor: pointer;
@@ -13,12 +13,10 @@
 
 .menu-icondiv-hm {
   transform: rotate(0deg);
-  -webkit-transform: rotate(0deg);
   transition: .30s;
 }
 .menu-icondiv-close-hm {
   transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
 }
 
 .menu-icon-hm {
@@ -37,8 +35,7 @@
     width: 45%;
   }
   .menu-icondiv-hm {
-    width: 3.5rem; height: 3.5rem;
-    transform: scale(0.8);
+    width: 2.8rem; height: 2.8rem;
   }
   .menu-icon-hm {
     transform: scale(1.6);
