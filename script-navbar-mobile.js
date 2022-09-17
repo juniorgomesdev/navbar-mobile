@@ -1,40 +1,57 @@
-const bodyMobile = document.querySelector('body');
 
-const header = document.querySelector('.header');
-const hide = document.querySelector('.hide-navbar-mobile');
-let bottom = null;
+var menu = false;
+function changeMenu() {
+	menu = !menu;
+}
 
 function addLinks(href, rel) {
-	const node = document.createElement('link');
+	var node = document.createElement('link');
 	node.setAttribute('href', href);
 	node.setAttribute('rel', rel);
-	const head = document.querySelector('head').appendChild(node);
+	var head = document.querySelector('head').appendChild(node);
 
-	return true
 }
 
-function openNavbarMobile() {
-	const navbarMobile = document.querySelector('.navbar-mobile');
+function menuAction() {
 	
-	navbarMobile.style.transform = 'translateX(0em)';
-	bottom = document.createElement('div');
-	bottom.setAttribute('onclick', 'closeNavbarMobile()');
-	bottom.style.position = 'absolute';
-	bottom.style.top = '0px';
-	bottom.style.width = '100%';
-	bottom.style.height = '100%';
-	bottom.style.backgroundColor = 'rgba(0,0,0,0.2)';
+	switch (menu) {
+		case false: 
+			openMenu()
+			break;
+		case true:
+			closeMenu()
+			break;
+	}
+	changeMenu()
+}
+		
+function openMenu() {
+	var menu = document.querySelector('.menu-hm');
+	menu.classList.remove('menu-close-hm');
 
-	hide.appendChild(bottom)
+	var iconDiv = document.querySelector('.menu-icondiv-hm');
+	iconDiv.classList.add('menu-icondiv-close-hm');
+
+	iconDiv.style.borderRadius = '100%'
+
+	var icon = document.querySelector('.menu-icon-hm');
+
+	icon.innerText = 'close';
 }
 
-function closeNavbarMobile() {
-	const navbarMobile = document.querySelector('.navbar-mobile');
+function closeMenu() {
+	var menu = document.querySelector('.menu-hm').classList.add('menu-close-hm');
+	
+	var iconDiv = document.querySelector('.menu-icondiv-hm');
+	iconDiv.classList.remove('menu-icondiv-close-hm');
 
-	navbarMobile.style.transform = 'translateX(-20em)';
-	hide.removeChild(bottom);
-	bottom = null;
-	bottom.s
+	iconDiv.style.borderRadius = '0.3rem'
+
+	var icon = document.querySelector('.menu-icon-hm');
+
+	icon.innerHTML = 'menu';
 }
 
-addLinks('https://fonts.googleapis.com/icon?family=Material+Icons', 'stylesheet')
+function buildMenu() {
+	addLinks('https://fonts.googleapis.com/icon?family=Material+Icons', 'stylesheet');
+} buildMenu()
